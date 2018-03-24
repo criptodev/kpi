@@ -1,9 +1,0 @@
-@media (max-width: 900px) {
-	.menu {
-		display: none;
-	}
-	.main {
-		width: 100%;
-		padding-left: 0;
-	}
-}

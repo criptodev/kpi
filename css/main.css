@@ -1,6 +1,3 @@
-/** {*/
-	/*outline: 1px solid red;*/
-/*}*/
 
 html, body {
 	margin: 0;
@@ -15,55 +12,82 @@ body {
 
 h1 {
 	font-family: serif;
-	font-size: 3em;
-	font-weight: normal;
+	font-size: 2.5em;
+  font-weight: normal;
+  display: inline;
 }
 
-.container {
-	width: 100%;
-	height: 1080px;
-	display: flex;
+.container{
+  padding: 0;
+  margin: 0;
+	min-height: 900px;
+	color: white;
 }
 
-.menu {
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+	height: 100%;
+  width: 300px;
 	background-color: #BDBDBD;
-	float: left;
-	width: 25em;
+	min-height: 1080px;
 }
 
 .menu-elements {
 	list-style-type: none;
 	color: #FAFAFA;
-	font-size: 2em;
+  font-size: 2em;
+  list-style-type: none;
 }
 
-.main {
-	width: 100%;
-	padding-left: 2em;
-	color: white;
+.main{
+  margin-left: 300px;
+}
+
+.tittle{
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
 .areas {
-	overflow-x: scroll;
-	display: flex;
+  margin-top: 50px;
+  padding-left: 30px;
+  height: 100px;
+  white-space: nowrap;
 }
 
 .area {
-	border: 1px solid white;
+	border: 2px solid white;
 	margin-right: 1em;
-	padding: 0.5em 3em;
-	font-size: 1.5em;
+	padding: 0.5em 2em;
+  font-size: 1.2em;
+  display: inline-block;
+  max-width: 250px;
+  min-width: 120px;
+	width: 15%;
+	cursor: pointer;
 }
 
 .dashboard {
-	margin-top: 1em;
+	margin-left: 30px;
 }
 
-.kpi {
+.kpi{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.kpi-contain {
 	background-color: black;
 	padding: 1em;
-	width: 250px;
+	margin: .5em;
+	
 }
+
 
 .kpi .name {
 	font-size: 2em;
@@ -73,7 +97,8 @@ h1 {
 	font-size: 4em;
 }
 
-.kpi .success {
+
+.success {
 	display: inline-block;
 	padding: 0 0.5em;
 	font-size: 3em;
@@ -81,78 +106,37 @@ h1 {
 	color: green;
 }
 
-.kpi .error {
+.error {
 	display: inline-block;
 	font-size: 3em;
+	padding: 0 0.5em;
 	border: 1px solid red;
 	color: red;
 }
 
-.area-btn{
-	height: 5em;
-	width: 5em;
-	border: 1px solid white;
-	border-radius: 50%;
-	background-color: white;
-	position: fixed;
-	margin-top: 15em;
-	margin-left: 45em;
-}
 .add-btn{
-	font-size: 4em;
-	padding: 23px;
-	color: #424242;
-}
-
-.area-btn:hover {
-	background-color: #EEEEEE;
-	border-color: #EEEEEE;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-bottom:50px;
+	margin-right: 50px;
+	font-size: 6em;
+	color: white;
 	cursor: pointer;
+
 }
 
-/*.menu {*/
-	/*width: 300px;*/
-	/*height: 100%;*/
-	/*background: #BDBDBD;*/
-	/*padding-left: 10px;*/
-	/*position: fixed;*/
-/*}*/
+@media (max-width: 1000px) {
+	.areas {
+		overflow-x: auto;
+	}
+}
+@media (max-width: 768px) {
+	.menu {
+		display: none;
+  }
+  .main{
+    margin-left: 50px;
+  }
 
-/*@media (max-width: 960px) {*/
-	/*.menu {*/
-		/*display: none;*/
-	/*}*/
-/*}*/
-/*.menu-elements {*/
-	/*color: #FAFAFA;*/
-	/*list-style-type: none;*/
-	/*font-size: 1.5em;*/
-/*}*/
-
-/*.main {*/
-	/*width: auto;*/
-	/*height: auto;*/
-	/*color: #FAFAFA;*/
-/*}*/
-
-/*.title {*/
-	/*font-family: "Times New Roman", Times, serif;*/
-	/*font-size: 50px;*/
-	/*font-weight:normal;*/
-	/*padding: 45px;*/
-/*}*/
-
-/*.area {*/
-	/*font-size: 30px;*/
-	/*margin-top: 40px;*/
-	/*margin-left: 50px;*/
-	/*width: 100%;*/
-/*}*/
-
-/*.area-elements {*/
-	/*border: 2px solid #FAFAFA;*/
-	/*padding: 10px 50px 10px;*/
-	/*font-weight: normal;*/
-	/*margin-left: 10px;*/
-	/*margin-right: 10px;*/
-/*}*/
+}
