@@ -90,25 +90,25 @@ h1 {
 
 
 .kpi .name {
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .kpi .value {
-	font-size: 4em;
+	font-size: 3em;
 }
 
 
 .success {
 	display: inline-block;
 	padding: 0 0.5em;
-	font-size: 3em;
+	font-size: 2em;
 	border: 1px solid green;
 	color: green;
 }
 
 .error {
 	display: inline-block;
-	font-size: 3em;
+	font-size: 2em;
 	padding: 0 0.5em;
 	border: 1px solid red;
 	color: red;
