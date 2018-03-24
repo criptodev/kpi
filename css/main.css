@@ -1,11 +1,11 @@
-
+/*Format Code*/
 html, body {
 	margin: 0;
 	padding:0;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans;
 }
-
+/*Tags*/
 body {
 	background-color: #424242;
 }
@@ -17,6 +17,7 @@ h1 {
   display: inline;
 }
 
+/*Main Container*/
 .container{
   padding: 0;
   margin: 0;
@@ -24,6 +25,7 @@ h1 {
 	color: white;
 }
 
+/*Sidebar Menu*/
 .menu{
   position: absolute;
   top: 0;
@@ -41,6 +43,7 @@ h1 {
   list-style-type: none;
 }
 
+/*Main Area*/
 .main{
   margin-left: 300px;
 }
@@ -69,8 +72,9 @@ h1 {
   min-width: 120px;
 	width: 15%;
 	cursor: pointer;
+	text-align: center;
 }
-
+/*KPI Area*/
 .dashboard {
 	margin-left: 30px;
 }
@@ -87,8 +91,6 @@ h1 {
 	margin: .5em;
 	
 }
-
-
 .kpi .name {
 	font-size: 1.5em;
 }
@@ -97,7 +99,7 @@ h1 {
 	font-size: 3em;
 }
 
-
+/*Conditions To KPI*/
 .success {
 	display: inline-block;
 	padding: 0 0.5em;
@@ -105,7 +107,6 @@ h1 {
 	border: 1px solid green;
 	color: green;
 }
-
 .error {
 	display: inline-block;
 	font-size: 2em;
@@ -113,7 +114,7 @@ h1 {
 	border: 1px solid red;
 	color: red;
 }
-
+/*Add Button*/
 .add-btn{
 	position: fixed;
 	bottom: 0;
@@ -126,6 +127,7 @@ h1 {
 
 }
 
+/*Media Query*/
 @media (max-width: 1000px) {
 	.areas {
 		overflow-x: auto;
@@ -138,5 +140,4 @@ h1 {
   .main{
     margin-left: 50px;
   }
-
 }

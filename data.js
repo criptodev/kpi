@@ -1,4 +1,4 @@
-data1 = {
+var data1 = {
 	menu: ["Desarrollo", "Administración", "Seguridad"],
 	sections: [
 		{
@@ -28,7 +28,7 @@ data1 = {
 	]
 }
 
-data2 = {
+var data2 = {
 	menu: ["Producción", "Calidad"],
 	sections: [
 		{
