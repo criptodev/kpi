@@ -34,11 +34,13 @@ new Vue({
 			this.filter = (category === "*") ? true : category.name;
 		},
 		addKpi: function (){
-			this.sections.push({
-				kpis: [
-					{ name: "Desvíos", limit: 20, unit: "u", value: 14 }
-				]
-				});
+			var categories = this.sections.map(function (o) {
+				return o.name;
+			});
+			var setKpi = Math.floor(Math.random() * 2);
+			this.sections[setKpi].kpis.push(
+				{ name: "Lorem", limit: 7, unit: "%", value: 6 }
+			);
 		}	
 	},
 	computed: {
