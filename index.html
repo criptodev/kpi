@@ -2,42 +2,44 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="viewport"	content="width=device-width,initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link href="https://fonts.googleapis.com/css?family=Roboto"	rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet" href="css/main.css">		
+		<link rel="stylesheet" href="css/main.css">
 		<title>Tablero de Indicadores</title>
 	</head>
 	<body>
 		<div class="container">
 			<nav class="menu">
-				<ul class="menu-elements">
-					<li v-for="item in menu"><a class="element"></a>{{item}}</a></li>
+				<ul	class="menu-elements">
+					<li	v-for="item	in menu"><a	class="element"></a>{{ item }}</a></li>
 				</ul>
 			</nav>
 			<section class="main">
-        <div class="tittle">
-          <h1>Tablero de Indicadores</h1>
-        </div>
+				<div class="tittle">
+					<h1>Tablero	de Indicadores</h1>
+				</div>
 				<div class="areas">
-					<a class="area" v-for="item in sections">{{ item.name }}</a>
+					<a v-for="item in sections" v-on:click="setFilter(item)"
+					v-bind:class="[{'area-pointer': filter === item.name}, 'area']">{{ item.name }}</a>
 				</div>
 				<div class="dashboard">
-					<div class="kpi" v-for="item in sections">
-						<div class="kpi-contain" v-for="subitem in item.kpis">
-							<span class="name" >{{subitem.name}}</span><br>
-							<span class="value">{{subitem.value}}</span>
-							<span v-bind:class="[{error: subitem.value > subitem.limit, success: subitem.value <= subitem.limit}]">{{subitem.limit}}{{subitem.unit}}</span>
-						</div>							
-					</div>					
+					<div class="kpi" v-for="kpi in kpis"
+						v-if="kpi.category === filter || filter === '*'">
+						<span class="name">{{ kpi.name }}</span><br>
+						<span class="value">{{ kpi.value }}</span>
+						<span v-bind:class="{'error': kpi.value > kpi.limit, 'success':
+							kpi.value <= kpi.limit}">
+							{{ kpi.limit }}{{ kpi.unit }}
+						</span>
+					</div>
 				</div>
 			</section>
-			<i class="material-icons add-btn">add_circle</i>	
+			<i v-on:click="addKpi()" class="material-icons add-btn">add_circle</i>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
-		<script src="data.js"></script>
-		<script src="main.js"></script>
+		<script	src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script	src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+		<script src="app.js"></script>
 	</body>
 </html>

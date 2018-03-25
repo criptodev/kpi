@@ -39,7 +39,7 @@ h1 {
 .menu-elements {
 	list-style-type: none;
 	color: #FAFAFA;
-  font-size: 2em;
+  font-size: 1.5em;
   list-style-type: none;
 }
 
@@ -65,32 +65,37 @@ h1 {
 .area {
 	border: 2px solid white;
 	margin-right: 1em;
-	padding: 0.5em 2em;
+	padding: 0.5em 1.5em;
   font-size: 1.2em;
   display: inline-block;
   max-width: 250px;
-  min-width: 120px;
+  min-width: 140px;
 	width: 15%;
 	cursor: pointer;
 	text-align: center;
 }
+
+.area-pointer{
+	color: #424242;
+	background-color: #BDBDBD;
+}
 /*KPI Area*/
 .dashboard {
 	margin-left: 30px;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 .kpi{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-}
 
-.kpi-contain {
+	justify-content: flex-start;
 	background-color: black;
 	padding: 1em;
 	margin: .5em;
-	
+	height: 116px;
+	width: 250px;
 }
+
 .kpi .name {
 	font-size: 1.5em;
 }
@@ -138,6 +143,14 @@ h1 {
 		display: none;
   }
   .main{
-    margin-left: 50px;
-  }
+    margin-left: 0px;
+	}
+	.add-btn{
+	margin-bottom:10px;
+	margin-right: 10px;
+	font-size: 4em;
+	}
+	.dashboard {
+		margin-left: 20px;
+	}
 }
