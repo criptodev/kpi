@@ -35,7 +35,7 @@ new Vue({
 		},
 		addKpi: function (){
 			this.sections.push({
-				kpisi: [
+				kpis: [
 					{ name: "Desvíos", limit: 20, unit: "u", value: 14 }
 				]
 				});
